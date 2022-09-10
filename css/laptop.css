@@ -1,0 +1,543 @@
+/*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 /
+      80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36
+      / 44 / 52 / 62 / 74 / 86 / 98
+      */
+/*Main-color: #199cdb;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "fontello", sans-serif; /*Font lấy theo file font.css cung cấp kèm theo*/
+  /* color: #868e96; */
+}
+
+#job-info p,
+#certificate p,
+#project p {
+  margin-bottom: 0;
+}
+
+/*Thêm ảnh nền vào phần hero section*/
+#banner {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(../images/banner.jpg);
+  height: 500px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*Tạo định dạng position cho text để nổi lên trên hình ảnh*/
+.name {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 1.5;
+}
+
+.name h1 {
+  color: #fff;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section > .container-md {
+  /* width: 1170px; */
+  margin: auto;
+  display: block;
+
+  position: relative;
+  padding-bottom: 50px;
+  border-collapse: collapse;
+}
+
+/*Tạo định dạng các item trên nav bar*/
+.container-md a.float {
+  display: inline-block;
+  text-decoration: none;
+  color: #495057;
+  /* font-size: 16px; */
+  text-transform: uppercase;
+  padding: 30px 24px;
+  border-left: 0.5px solid #ced4da;
+  border-right: 0.5px solid #ced4da;
+}
+
+.container-md a.float i,
+.icon {
+  color: #199cdb;
+}
+
+/*Tạo và clear float cho nav bar*/
+.float-left {
+  float: left;
+  text-align: center;
+}
+
+.float-right {
+  float: right;
+  text-align: center;
+}
+
+nav.container-md {
+  padding: 0 50px;
+}
+
+nav.container-md:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/*Bố trí avatar trên nav bar*/
+.avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 300%;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*THÔNG TIN CÁ NHÂN*/
+#about.bg-grey {
+  background: linear-gradient(to left, #f1f3f5, #f1f3f5 49.9999%, #f7f7f7 50%);
+}
+
+/*Chia 2 cột và định dạng cho từng cột*/
+/* #about .container-md {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  line-height: 1.2;
+} */
+
+#target {
+  padding: 100px 80px 0 0;
+}
+
+#personal-info {
+  padding: 100px 0 0 80px;
+}
+
+/*Tạo kiểu cho phần thông tin info chi tiết*/
+
+#personal-info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-left: 0;
+}
+
+/*Tạo kiểu chữ cho các phần tử text*/
+
+#job-info ul {
+  padding-left: 0;
+}
+
+ul span,
+.timeline-list p:first-child,
+.prof .cols:nth-child(2) p,
+.cols-cell p:first-child,
+h1 {
+  font-weight: bold;
+  color: #495057;
+}
+
+.timeline-list p:nth-child(2) {
+  font-style: italic;
+}
+
+.section-title {
+  padding: 48px 0;
+}
+
+/*THÔNG TIN NGHỀ NGHIỆP*/
+/* #job-info .container-md { */
+/*Chia thành 3 cột*/
+/* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px; */
+/* } */
+
+.cols-block {
+  /*Tạo kiểu mỗi cột*/
+  display: grid;
+  grid-template-columns: 75% 25%;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid #ced4da;
+  padding: 16px;
+  height: 100%;
+  grid-template-rows: auto 1fr;
+}
+
+.cols-block-box {
+  /*Tạo kiểu mỗi ô nhỏ trong cột thuộc khối thông tin nghề nghiệp*/
+  display: grid;
+  align-items: center;
+  justify-content: left;
+  padding: 16px;
+}
+
+.prof-now {
+  /*Tạo kiểu màu nền cho chữ "Hiện tại"*/
+  background: #199cdb;
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.prof-detail-box {
+  /*Bố trí khối Grid trong ô*/
+  grid-column: 1/ -1;
+  line-height: 1.5;
+}
+
+.prof-icon-box {
+  /*Bố trí khối Flex trong ô icon phần Sở thích*/
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.prof-icon-box i {
+  /*Phóng to các icon phần Thông tin nghề nghiệp*/
+  transform: scale(3);
+}
+
+.prof-icon-box.hobby-box {
+  /*Tạo margin cho khối icon phần Sở thích*/
+  margin-left: 64px;
+}
+
+.prof-icon-box.hobby-box i {
+  /*Tạo đường tròn bao ngoài icon phần Sở thích*/
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 36px;
+  transform: scale(1.5);
+  border: 1px solid #199cdb;
+  color: #199cdb;
+}
+
+.icon-hobby-col {
+  /*Tạo kiểu cho mỗi cột icon sở thích*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-top: 32px;
+}
+
+/*Tạo list cho các mốc thời gian*/
+ul.timeline {
+  list-style-type: none;
+}
+
+/*Chuyển các khối mốc thời gian thành định vị relative để dễ dàng dịch chuyển và thêm phần tử*/
+li.timeline-list {
+  position: relative;
+  margin: 0;
+  padding-bottom: 1em;
+  padding-left: 24px;
+}
+
+/*Tạo điểm mốc thời gian*/
+li.timeline-list::before {
+  content: "";
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 32 32' focusable='false'><circle stroke='none' fill='%2309c' cx='16' cy='16' r='10'></circle></svg>");
+  position: absolute;
+  left: -5px;
+  top: 0;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+/*Tạo thang điểm cho các kỹ năng*/
+
+.grades {
+  margin-bottom: 16px;
+}
+.grade {
+  background: #199cdb;
+  display: inline-block;
+  height: 5px;
+  margin-right: 10px;
+  width: 45px;
+}
+
+.fail {
+  background: #dee2e6;
+}
+
+/*CHỨNG CHỈ - GIẢI THƯỞNG*/
+/* .section-content { */
+/*Tạo grid với 2 cột lớn*/
+/* display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 64px;
+  column-gap: 24px;
+} */
+
+.certificate {
+  /*Tạo grid với 2 cột cho mỗi cột trong phần Chứng chỉ*/
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 24px;
+  padding-bottom: 24px;
+}
+
+/* .certificate-border {
+  border-bottom: 1px solid #d6c08d;
+} */
+
+/* .img-border {
+  border-left: 1px solid #d6c08d;
+  padding-left: 24px;
+} */
+
+/* Tạo các đường border theo phần tử div thứ 2*/
+.row .section-content:nth-child(2) .certificate {
+  position: relative;
+  margin: 0;
+}
+
+/*Tạo các đường border dọc*/
+.row .section-content:nth-child(2) .certificate:before {
+  content: "";
+  background-color: #d6c08d;
+  position: absolute;
+  bottom: 24px;
+  top: 25px;
+  left: -14px;
+  width: 1px;
+}
+
+/*Tạo các đường border ngang*/
+.row .section-content:nth-child(2) .certificate:after {
+  content: "";
+  background-color: #d6c08d;
+  position: absolute;
+  top: 175px;
+  left: -648px;
+  right: 0;
+  height: 1px;
+}
+
+/*DỰ ÁN*/
+
+#project a {
+  text-decoration: none;
+  color: var(--bs-body-color);
+  background-color: none;
+}
+
+.cols-cell {
+  /*Tạo kiểu cho mỗi ô trong cột*/
+  display: flex;
+  gap: 48px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  align-items: center;
+}
+
+/*Tạo kiểu cho bảng*/
+#project table {
+  border: 1px solid #ced4da;
+  border-collapse: collapse;
+  height: 275px;
+  width: 100%;
+}
+
+#project tr {
+  border-bottom: 1px solid #ced4da;
+}
+
+#project td {
+  padding: 12px;
+  vertical-align: top;
+}
+
+#project tr td:first-child {
+  width: 30%;
+}
+
+.year {
+  color: #fff;
+  padding: 5px 10px;
+  background-color: #199cdb;
+  border-radius: 20px;
+  /* margin-right: 20px; */
+}
+
+/*FOOTER*/
+#footer ul {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+#footer ul a {
+  text-decoration: none;
+  align-items: center;
+}
+
+#footer ul span {
+  font-weight: normal;
+  padding-left: 8px;
+  vertical-align: middle;
+}
+
+#footer i {
+  /*Tạo background bao ngoài icon*/
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 36px;
+  transform: scale(1.5);
+  background-color: #199cdb;
+  color: #fff;
+  padding: 8px;
+}
+
+/*PROJECT SECTIONS*/
+.project-charter .container-md {
+  background-color: blue;
+}
+
+/* Tạo khối grid layout cho Project Charter */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: blue;
+  height: 100%; /*Height should be specified to align items vertically,
+  height of showcase is made, and now should make height of parent element of grid */
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Tạo khối flex layout cho các items bên trong các blocks */
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+/* Tạo kiểu cho các thẻ */
+.tag {
+  background-color: #e7f5ff;
+  color: #333;
+  /* border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); */
+  padding: 16px;
+  height: 100%;
+}
+
+/* Định dạng kích cỡ các thẻ bên trong Grid */
+#project-charter .grid > *:first-child,
+#project-charter .grid > *:nth-child(4) {
+  grid-column: 1 / span 2;
+}
+
+#project-charter .grid > *:nth-child(3) {
+  grid-row: 1 / span 2;
+  grid-column: 4;
+}
+
+#project-charter .grid > *:nth-child(4) .flex {
+  align-items: flex-start;
+  gap: 48px;
+  padding-left: 16px;
+}
+
+#project-charter .grid h4 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #adb5bd;
+  color: blue;
+}
+
+#project-charter .tag i {
+  margin: 0 20px;
+  font-size: 1.5em;
+}
+
+#project-charter .tag ul {
+  padding-left: 0;
+}
+
+#project-charter .tag:first-child li {
+  border-bottom: 1px solid #dee2e6;
+}
+
+#project-charter .tag:nth-child(3) ul {
+  list-style-type: none;
+}
+
+.timeline-details {
+  border-bottom: 1px dashed #74c0fc;
+}
+
+#project-charter p,
+#project-charter h6 {
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+/* Tạo số hiệu bo tròn */
+.timeline-no {
+  color: #fff;
+  width: 52px;
+  height: 52px;
+  font-size: 1.2em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #b197fc;
+  margin-right: 20px;
+  border: 1px solid #868e96;
+}
