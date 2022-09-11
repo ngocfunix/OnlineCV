@@ -450,6 +450,7 @@ li.timeline-list::before {
   justify-content: center;
   align-items: flex-start;
   background-color: blue;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   height: 100%; /*Height should be specified to align items vertically,
   height of showcase is made, and now should make height of parent element of grid */
 }
